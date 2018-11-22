@@ -25,3 +25,5 @@ client $ au run --watch
 ```
 
 url is at: localhost:8080
+
+![](screen.gif)
