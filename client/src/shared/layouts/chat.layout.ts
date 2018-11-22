@@ -32,7 +32,7 @@ export class ChatLayout {
   send() {
     this.chatRoomService.sendMessage(this.newMessage);
     this.newMessage = '';
-    this.hasFocus = false;
+    //this.hasFocus = false;
   }
 
   hasFocusChanged(newValue) {
