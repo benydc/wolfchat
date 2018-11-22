@@ -39,8 +39,6 @@ export class MqttService {
     let payload = JSON.parse(message.payloadString);
     let topicPath = message.destinationName.split('/');
 
-    console.log('message arrived.');
-
     switch (topicPath[0]) {
       case 'message':
         var roomId = topicPath[1];

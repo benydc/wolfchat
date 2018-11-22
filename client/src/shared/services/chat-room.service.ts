@@ -41,5 +41,3 @@ export class ChatRoomService {
     }
   }
 }
-
-//`${newDate.getDate()}/${newDate.getMonth()}/${newDate.getFullYear()}`
