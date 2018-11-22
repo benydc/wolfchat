@@ -1,0 +1,28 @@
+<template>
+  <require from="../../style/chat.layout.css"></require>
+  <require from="../../resources/value-converters/date-format"></require>
+  <header>
+    <h4 if.bind="!sharedState.activeChatRoom.isActiveChatRoom">Click on the map to start a chat.</h4>
+    <h4 class="chatroom-name" if.bind="sharedState.activeChatRoom.isActiveChatRoom">${sharedState.activeChatRoom.marker.roomName}</h4>
+    <h6 class="chatroom-owner-name" if.bind="sharedState.activeChatRoom.isActiveChatRoom">ROOM ADMINS: ${sharedState.activeChatRoom.marker.roomOwner}</h6>
+  </header>
+  <section if.bind="sharedState.activeChatRoom.isActiveChatRoom">
+    <div class="chat-body" element.ref="chatBodyRef">
+      <div repeat.for="message of sharedState.chatRooms[sharedState.activeChatRoom.marker.roomId]" class="message-line ${ sharedState.username == message.user_name ? 'right' : '' }">
+        <div class="user-avatar"><i class="fas fa-user-circle"></i></div>
+        <div class="message-body ${ sharedState.username == message.user_name ? 'user-sender-text-align' : '' }">
+          <div class="user-name">@${message.user_name}</div>
+          <div class="user-message ${ sharedState.username == message.user_name ? 'user-sender' : '' }">${message.message}</div>
+          <div class="user-message-date">${message.date_message | dateFormat}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer if.bind="sharedState.activeChatRoom.isActiveChatRoom">
+    <form class="form-chat-submit" role="form" submit.delegate="send()">
+      <div click.trigger="openSettings()"><i class="fas fa-sliders-h"></i></div>
+      <input class="footer-input" type="text" placeholder="Type a message..." value.bind="newMessage" focus.bind="hasFocus" />
+      <button>Send</button>
+    </form>
+  </footer>
+</template>

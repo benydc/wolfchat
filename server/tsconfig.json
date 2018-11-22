@@ -1,0 +1,36 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "sourceMap": true,
+    "target": "es2017",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "declaration": false,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowJs": true,
+    "moduleResolution": "node",
+    "lib": ["es2017", "dom"],
+    "baseUrl": "./src",
+    "paths": {
+      "config": ["./config/*"],
+      "controllers": ["./controllers/*"],
+      "interfaces": ["./interfaces/*"],
+      "schemas": ["./schemas/*"],
+      "services": ["./services/*"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "src/types/*",
+    "dist/**/*"
+  ],
+  "include": [
+    "src/**/*"
+  ],
+  "atom": {
+    "rewriteTsconfig": false
+  }
+}

@@ -1,0 +1,12 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-container>input {
+  margin: 5px;
+}
+
+.login-container>button {
+  margin: 5px;
+}

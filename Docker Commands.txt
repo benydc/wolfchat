@@ -1,0 +1,7 @@
+Docker commands:
+
+sudo docker run -p 9002:8080 -p 9001:1883 -e "DOCKER_VERNEMQ_ALLOW_ANONYMOUS=on" --name wolf-vernemq -d erlio/docker-vernemq
+
+sudo docker run -p 9003:6379 --name wolf-redis -d redis redis-server --appendonly yes
+
+sudo docker run -p 9004:9042 -p 9005:9160 --name wolf-cassandra -d cassandra:3

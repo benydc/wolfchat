@@ -1,0 +1,16 @@
+{
+    "development": {
+        "web_app": "http://localhost:8080",
+        "web_app_whitelist": ["http://localhost:8080"],
+        "docker_ip": "localhost",
+        "cors": false,
+        "server_port": 3000
+    },
+    "production": {
+        "web_app": "https://wolfchat.synthbit.io",
+        "web_app_whitelist": ["https://wolfchat.synthbit.io"],
+        "docker_ip": "10.0.0.9",
+        "cors": true,
+        "server_port": 3003
+    }
+}

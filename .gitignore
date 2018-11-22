@@ -1,0 +1,21 @@
+# Dependencies
+server/node_modules
+client/node_modules
+
+# Compiled files
+client/dist
+server/dist
+
+# OS
+#
+# Ref: https://github.com/github/gitignore/blob/master/Global/macOS.gitignore
+# Ref: https://github.com/github/gitignore/blob/master/Global/Windows.gitignore
+# Ref: https://github.com/github/gitignore/blob/master/Global/Linux.gitignore
+.DS_STORE
+Thumbs.db
+server/.DS_STORE
+server/Thumbs.db
+client/.DS_STORE
+client/Thumbs.db
+
+

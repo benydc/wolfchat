@@ -1,0 +1,12 @@
+<template>
+  <require from="../../style/login.layout.css"></require>
+  <ux-dialog>
+    <ux-dialog-body>
+      <form class="login-container" submit.delegate="login()">
+        <input type="text" placeholder="username" value.bind="username" />
+        <input type="password" placeholder="password" value.bind="password" />
+        <button>log-in or sign-up</button>
+      </form>
+    </ux-dialog-body>
+  </ux-dialog>
+</template>

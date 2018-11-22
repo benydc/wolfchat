@@ -1,0 +1,14 @@
+apps:
+  - script: ./dist/server.js
+    name: wolf-chat-server
+    append_env_to_name: true
+    source_map_support: false
+    log_date_format: 'YYYY-MM-DD HH:mm Z'
+    env:
+      NODE_ENV: development
+    env_production:
+      NODE_ENV: production
+    env_staging:
+      NODE_ENV: staging
+    error_file: ./logs/error.log
+    out_file: ./logs/out.log
